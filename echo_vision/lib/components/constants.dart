@@ -15,3 +15,9 @@ TextStyle kSubHeadingStyle = const TextStyle(
 );
 
 TextStyle kNormalStyle = const TextStyle(fontSize: 15);
+
+TextStyle kConstantStyle = const TextStyle(
+  fontSize: 30,
+  fontWeight: FontWeight.bold,
+  color: Colors.black,
+);

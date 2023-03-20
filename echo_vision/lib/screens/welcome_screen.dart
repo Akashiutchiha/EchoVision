@@ -1,6 +1,8 @@
+import 'package:echo_vision/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../components/constants.dart';
+import '../components/text_button_style.dart';
 import 'home.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -57,55 +59,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   TextButtonStyle(
-                      text: 'Register', color: kPrimaryColor, child: Home()),
+                      text: 'Register',
+                      color: kPrimaryColor,
+                      child: PrototypeScreen()),
                   SizedBox(
                     height: 20,
                   ),
                   TextButtonStyle(
-                      text: 'Login', color: Color(0XFFafbbef), child: Home()),
+                      text: 'Login',
+                      color: Color(0XFFafbbef),
+                      child: PrototypeScreen()),
                 ],
               ),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class TextButtonStyle extends StatelessWidget {
-  TextButtonStyle({
-    required this.text,
-    required this.color,
-    required this.child,
-  });
-  final String text;
-  final Color color;
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 50,
-      width: 200,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: TextButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => child,
-            ),
-          );
-        },
-        child: Text(
-          '$text',
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 20,
           ),
         ),
       ),
