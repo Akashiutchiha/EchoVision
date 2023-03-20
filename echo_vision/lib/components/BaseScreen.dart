@@ -5,9 +5,12 @@ import 'package:flutter/material.dart';
 import 'constants.dart';
 
 class BaseScreen extends StatelessWidget {
-  BaseScreen({required this.title});
+  BaseScreen(
+      {required this.title, required this.child, required this.hintText});
 
   final String title;
+  final Widget child;
+  final String hintText;
   @override
   Widget build(BuildContext context) {
     String valueEntered;
@@ -54,7 +57,7 @@ class BaseScreen extends StatelessWidget {
                   fontSize: 20.0,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'Full Name',
+                  hintText: '$hintText',
                   hintStyle: TextStyle(
                     color: Color(0xFFbfc9f2),
                   ),
@@ -86,7 +89,7 @@ class BaseScreen extends StatelessWidget {
                 height: 50,
                 width: double.infinity,
                 child: TextButtonStyle(
-                    text: "Confirm", color: kPrimaryColor, child: Home()),
+                    text: "Confirm", color: kPrimaryColor, child: child),
               )
             ],
           ),

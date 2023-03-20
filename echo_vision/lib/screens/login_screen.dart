@@ -1,4 +1,5 @@
 import 'package:echo_vision/components/BaseScreen.dart';
+import 'package:echo_vision/screens/home.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -8,7 +9,15 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: BaseScreen(title: "Tell us your full name"),
+        body: BaseScreen(
+          title: "Tell us your Email address",
+          hintText: "Full Name",
+          child: BaseScreen(
+            title: 'Please tell us your password',
+            hintText: 'Email',
+            child: Home(),
+          ),
+        ),
       ),
     );
   }
