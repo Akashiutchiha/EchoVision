@@ -1,6 +1,8 @@
-import 'package:echo_vision/home.dart';
-import 'package:echo_vision/splash_screen.dart';
+import 'package:echo_vision/screens/home.dart';
+import 'package:echo_vision/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
+
+import 'components/constants.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +18,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
