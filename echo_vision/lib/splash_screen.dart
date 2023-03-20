@@ -11,21 +11,17 @@ class Splashscreen extends StatelessWidget {
     return Scaffold(
       body: Stack(children: [
         SplashScreen(
-          seconds: 5,
+          seconds: 10,
           navigateAfterSeconds: const Home(),
           title: const Text('Echo Vision'),
+          image: const Image(
+            image: AssetImage('images/Frame 5.png'),
+          ),
           backgroundColor: Color(0xFF1e6ff8),
           styleTextUnderTheLoader: const TextStyle(),
           photoSize: 100.0,
           loaderColor: Color.fromARGB(255, 255, 255, 255),
         ),
-        Center(
-          child: Icon(
-            Icons.ac_unit_sharp,
-            size: 100.0,
-            color: Colors.white,
-          ),
-        )
       ]),
     );
   }
