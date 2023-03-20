@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
 import '../components/constants.dart';
-import 'home.dart';
+import 'camera_screen.dart';
 
 class Splashscreen extends StatelessWidget {
   const Splashscreen({super.key});

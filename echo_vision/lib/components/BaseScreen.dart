@@ -1,5 +1,5 @@
 import 'package:echo_vision/components/text_button_style.dart';
-import 'package:echo_vision/screens/home.dart';
+import 'package:echo_vision/screens/camera_screen.dart';
 import 'package:flutter/material.dart';
 
 import 'constants.dart';

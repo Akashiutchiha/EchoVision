@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../components/constants.dart';
 import '../components/text_button_style.dart';
-import 'home.dart';
+import 'camera_screen.dart';
 import 'login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {

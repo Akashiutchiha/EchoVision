@@ -1,4 +1,4 @@
-import 'package:echo_vision/screens/home.dart';
+import 'package:echo_vision/screens/camera_screen.dart';
 import 'package:echo_vision/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';

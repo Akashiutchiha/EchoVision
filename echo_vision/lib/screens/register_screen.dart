@@ -1,7 +1,7 @@
 import 'package:echo_vision/components/BaseScreen.dart';
 import 'package:flutter/material.dart';
 
-import 'home.dart';
+import 'camera_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});

@@ -1,5 +1,6 @@
 import 'package:echo_vision/components/BaseScreen.dart';
-import 'package:echo_vision/screens/home.dart';
+import 'package:echo_vision/components/camera.dart';
+import 'package:echo_vision/screens/camera_screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
