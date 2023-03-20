@@ -1,9 +1,11 @@
-import 'package:echo_vision/screens/login_screen.dart';
+import 'package:echo_vision/components/BaseScreen.dart';
+import 'package:echo_vision/screens/register_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../components/constants.dart';
 import '../components/text_button_style.dart';
 import 'home.dart';
+import 'login_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -59,16 +61,17 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: [
                   TextButtonStyle(
-                      text: 'Register',
-                      color: kPrimaryColor,
-                      child: PrototypeScreen()),
+                    text: 'Register',
+                    color: kPrimaryColor,
+                    child: RegisterScreen(),
+                  ),
                   SizedBox(
                     height: 20,
                   ),
                   TextButtonStyle(
                       text: 'Login',
                       color: Color(0XFFafbbef),
-                      child: PrototypeScreen()),
+                      child: LoginScreen()),
                 ],
               ),
             ],

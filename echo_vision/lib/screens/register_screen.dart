@@ -1,14 +1,14 @@
 import 'package:echo_vision/components/BaseScreen.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class RegisterScreen extends StatelessWidget {
+  const RegisterScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: BaseScreen(title: "Tell us your full name"),
+        body: BaseScreen(title: "Register"),
       ),
     );
   }
