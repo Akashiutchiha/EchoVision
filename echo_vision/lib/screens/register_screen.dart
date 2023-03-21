@@ -9,20 +9,7 @@ class RegisterScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: BaseScreen(
-          title: "Tell us your full name",
-          hintText: "Full Name",
-          child: BaseScreen(
-            title: 'Please tell us your e-mail address',
-            hintText: 'Email',
-            child: BaseScreen(
-                title: "Please tell us your password",
-                child: Home(),
-                hintText: "Password"),
-          ),
-        ),
-      ),
+      child: Scaffold(),
     );
   }
 }

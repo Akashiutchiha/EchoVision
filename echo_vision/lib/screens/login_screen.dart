@@ -8,17 +8,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Scaffold(
-        body: BaseScreen(
-          title: "Tell us your Email address",
-          hintText: "Full Name",
-          child: BaseScreen(
-            title: 'Please tell us your password',
-            hintText: 'Email',
-            child: Home(),
-          ),
-        ),
-      ),
+      child: Scaffold(),
     );
   }
 }
