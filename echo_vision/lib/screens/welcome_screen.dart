@@ -61,14 +61,14 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   TextButtonStyle(
                       text: 'Register',
                       color: kPrimaryColor,
-                      child: PrototypeScreen()),
+                      child: Container()),
                   SizedBox(
                     height: 20,
                   ),
                   TextButtonStyle(
                       text: 'Login',
                       color: Color(0XFFafbbef),
-                      child: PrototypeScreen()),
+                      child: Container()),
                 ],
               ),
             ],
