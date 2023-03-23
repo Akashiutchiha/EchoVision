@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import '../../components/constants.dart';
 import '../../components/my_text_field.dart';
 import '../../components/text_button_style.dart';
+import '../camera_screen.dart';
 
 class Login2 extends StatelessWidget {
   const Login2({super.key});
@@ -66,7 +67,7 @@ class Login2 extends StatelessWidget {
                 child: TextButtonStyle(
                   text: "Confirm",
                   color: kPrimaryColor,
-                  child: Home(),
+                  child: CameraScreen(),
                 ),
               )
             ],

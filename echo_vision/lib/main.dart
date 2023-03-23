@@ -1,10 +1,13 @@
-import 'package:echo_vision/screens/home.dart';
+import 'package:camera/camera.dart';
 import 'package:echo_vision/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 
-import 'components/constants.dart';
+late List<CameraDescription> cameras;
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  cameras = await availableCameras();
   runApp(MyApp());
 }
 

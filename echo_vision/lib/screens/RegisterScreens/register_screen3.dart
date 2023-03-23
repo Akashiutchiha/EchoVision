@@ -5,6 +5,7 @@ import '../../components/constants.dart';
 import '../../components/text_button_style.dart';
 import '../../components/my_text_field.dart';
 
+import '../camera_screen.dart';
 import '../home.dart';
 
 class Register3 extends StatelessWidget {
@@ -67,7 +68,7 @@ class Register3 extends StatelessWidget {
                 child: TextButtonStyle(
                   text: "Confirm",
                   color: kPrimaryColor,
-                  child: Home(),
+                  child: CameraScreen(),
                 ),
               )
             ],
