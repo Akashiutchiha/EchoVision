@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../components/constants.dart';
 import '../components/text_button_style.dart';
 import 'home.dart';
-import 'login_screen1.dart';
+import 'LoginScreens/login_screen1.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});

@@ -2,9 +2,9 @@ import 'package:echo_vision/components/BaseScreen.dart';
 import 'package:echo_vision/screens/home.dart';
 import 'package:flutter/material.dart';
 
-import '../components/constants.dart';
-import '../components/my_text_field.dart';
-import '../components/text_button_style.dart';
+import '../../components/constants.dart';
+import '../../components/my_text_field.dart';
+import '../../components/text_button_style.dart';
 import 'login_screen2.dart';
 
 class Login1 extends StatelessWidget {
