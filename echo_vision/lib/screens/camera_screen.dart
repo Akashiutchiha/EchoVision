@@ -1,4 +1,5 @@
 import 'package:echo_vision/components/camera.dart';
+import 'package:echo_vision/screens/home.dart';
 import 'package:flutter/material.dart';
 
 class CameraScreen extends StatelessWidget {
@@ -26,9 +27,15 @@ class CameraScreen extends StatelessWidget {
                       topRight: Radius.circular(30),
                     ),
                   ),
-                  child: const ListTile(
-                    trailing: Image(
-                      image: AssetImage("images/setting.png"),
+                  child: ListTile(
+                    trailing: GestureDetector(
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Home()));
+                      },
+                      child: Image(
+                        image: AssetImage("images/setting.png"),
+                      ),
                     ),
                   ),
                 ),
