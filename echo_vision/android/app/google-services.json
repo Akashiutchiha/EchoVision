@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "908635140234",
+    "project_id": "echovision-4499c",
+    "storage_bucket": "echovision-4499c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908635140234:android:dc236221bc5c195d43bd73",
+        "android_client_info": {
+          "package_name": "com.example.echo_vision"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908635140234-6jn33r996hbufrfpe27c020cf69v6a20.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEnyHfYPTRXr1NPKeiIDMqyMUiYimJ1TU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908635140234-6jn33r996hbufrfpe27c020cf69v6a20.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
