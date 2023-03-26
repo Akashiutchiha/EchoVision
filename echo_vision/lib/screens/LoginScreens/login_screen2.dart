@@ -1,7 +1,7 @@
-import 'package:echo_vision/components/BaseScreen.dart';
-import 'package:echo_vision/screens/home.dart';
+import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-
+import 'package:firebase_auth/firebase_auth.dart';
+import "package:echo_vision/Logic/email_password_provider.dart";
 import '../../components/constants.dart';
 import '../../components/my_text_field.dart';
 import '../../components/text_button_style.dart';
@@ -12,6 +12,8 @@ class Login2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _auth = FirebaseAuth.instance;
+    var emailAndpassword = Provider.of<EmailAndPassword>(context);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -47,6 +49,9 @@ class Login2 extends StatelessWidget {
               ),
               MyTextField(
                 title: "Password",
+                onPressed: (value) {
+                  emailAndpassword.password = value;
+                },
               ),
               Expanded(
                 child: Center(
@@ -67,13 +72,23 @@ class Login2 extends StatelessWidget {
                 child: TextButtonStyle(
                   text: "Confirm",
                   color: kPrimaryColor,
-                  Firebase_Func: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CameraScreen(),
-                      ),
-                    );
+                  Firebase_Func: () async {
+                    try {
+                      final newUser = await _auth.signInWithEmailAndPassword(
+                          email: emailAndpassword.email,
+                          password: emailAndpassword.password);
+                      if (newUser != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CameraScreen(),
+                          ),
+                        );
+                      }
+                    } catch (e) {
+                      print(e);
+                      print('Not Registered');
+                    }
                   },
                 ),
               )

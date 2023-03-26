@@ -74,11 +74,12 @@ class Register3 extends StatelessWidget {
                 child: TextButtonStyle(
                   text: "Confirm",
                   color: kPrimaryColor,
-                  Firebase_Func: () {
+                  Firebase_Func: () async {
                     try {
-                      final newUser = _auth.createUserWithEmailAndPassword(
-                          email: emailAndpassword.email,
-                          password: emailAndpassword.password);
+                      final newUser =
+                          await _auth.createUserWithEmailAndPassword(
+                              email: emailAndpassword.email,
+                              password: emailAndpassword.password);
                       if (newUser != null) {
                         Navigator.push(
                           context,

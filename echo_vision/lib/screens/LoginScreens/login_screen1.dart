@@ -1,17 +1,18 @@
-import 'package:echo_vision/components/BaseScreen.dart';
-import 'package:echo_vision/screens/home.dart';
 import 'package:flutter/material.dart';
-
 import '../../components/constants.dart';
 import '../../components/my_text_field.dart';
 import '../../components/text_button_style.dart';
 import 'login_screen2.dart';
+import 'package:provider/provider.dart';
+import "package:echo_vision/Logic/email_password_provider.dart";
 
 class Login1 extends StatelessWidget {
   const Login1({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var emailAndpassword = Provider.of<EmailAndPassword>(context);
+
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -47,6 +48,9 @@ class Login1 extends StatelessWidget {
               ),
               MyTextField(
                 title: "Email Address",
+                onPressed: (value) {
+                  emailAndpassword.email = value;
+                },
               ),
               Expanded(
                 child: Center(
