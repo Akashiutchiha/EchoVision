@@ -89,7 +89,10 @@ class BaseScreen extends StatelessWidget {
                 height: 50,
                 width: double.infinity,
                 child: TextButtonStyle(
-                    text: "Confirm", color: kPrimaryColor, child: child),
+                  text: "Confirm",
+                  color: kPrimaryColor,
+                  Firebase_Func: () {},
+                ),
               )
             ],
           ),

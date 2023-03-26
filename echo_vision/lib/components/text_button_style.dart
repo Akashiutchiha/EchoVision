@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 
 class TextButtonStyle extends StatelessWidget {
-  TextButtonStyle({
-    required this.text,
-    required this.color,
-    required this.child,
-  });
+  TextButtonStyle(
+      {required this.text, required this.color, this.Firebase_Func});
   final String text;
   final Color color;
-  final Widget child;
+  VoidCallback? Firebase_Func;
 
   @override
   Widget build(BuildContext context) {
@@ -20,14 +17,7 @@ class TextButtonStyle extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       child: TextButton(
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => child,
-            ),
-          );
-        },
+        onPressed: Firebase_Func,
         child: Text(
           '$text',
           style: TextStyle(

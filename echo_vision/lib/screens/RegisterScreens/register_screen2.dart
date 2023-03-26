@@ -1,17 +1,18 @@
-import 'package:echo_vision/screens/RegisterScreens/register_screen2.dart';
 import 'package:echo_vision/screens/RegisterScreens/register_screen3.dart';
+import 'package:provider/provider.dart';
+import '../../Logic/email_password_provider.dart';
 import 'package:flutter/material.dart';
 import '../../components/constants.dart';
 import '../../components/text_button_style.dart';
 import '../../components/my_text_field.dart';
-
-import '../home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Register2 extends StatelessWidget {
-  const Register2({super.key});
-
+  final _auth = FirebaseAuth.instance;
   @override
   Widget build(BuildContext context) {
+    var emailAndpassword =
+        Provider.of<EmailAndPassword>(context, listen: false);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -47,6 +48,9 @@ class Register2 extends StatelessWidget {
               ),
               MyTextField(
                 title: "Email Address",
+                onPressed: (value) {
+                  emailAndpassword.email = value;
+                },
               ),
               Expanded(
                 child: Center(
@@ -67,7 +71,12 @@ class Register2 extends StatelessWidget {
                 child: TextButtonStyle(
                   text: "Confirm",
                   color: kPrimaryColor,
-                  child: Register3(),
+                  Firebase_Func: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) {
+                      return Register3();
+                    }));
+                  },
                 ),
               )
             ],

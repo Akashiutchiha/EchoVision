@@ -67,7 +67,14 @@ class Login1 extends StatelessWidget {
                 child: TextButtonStyle(
                   text: "Confirm",
                   color: kPrimaryColor,
-                  child: Login2(),
+                  Firebase_Func: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Login2(),
+                      ),
+                    );
+                  },
                 ),
               )
             ],

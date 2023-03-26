@@ -1,14 +1,17 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:io';
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
-  const MyTextField({required this.title});
+  MyTextField({required this.title, this.onPressed});
 
   final String title;
+  Function(String)? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      onChanged: (value) {},
+      onChanged: onPressed,
       style: TextStyle(
         color: Colors.black,
         fontSize: 20.0,

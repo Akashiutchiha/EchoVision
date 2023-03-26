@@ -1,18 +1,21 @@
-import 'package:echo_vision/screens/RegisterScreens/register_screen2.dart';
-import 'package:echo_vision/screens/RegisterScreens/register_screen3.dart';
+import 'package:provider/provider.dart';
+import '../../Logic/email_password_provider.dart';
 import 'package:flutter/material.dart';
 import '../../components/constants.dart';
 import '../../components/text_button_style.dart';
 import '../../components/my_text_field.dart';
-
 import '../camera_screen.dart';
 import '../home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Register3 extends StatelessWidget {
   const Register3({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final _auth = FirebaseAuth.instance;
+    var emailAndpassword =
+        Provider.of<EmailAndPassword>(context, listen: false);
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -48,6 +51,9 @@ class Register3 extends StatelessWidget {
               ),
               MyTextField(
                 title: "Password",
+                onPressed: (value) {
+                  emailAndpassword.password = value;
+                },
               ),
               Expanded(
                 child: Center(
@@ -68,7 +74,23 @@ class Register3 extends StatelessWidget {
                 child: TextButtonStyle(
                   text: "Confirm",
                   color: kPrimaryColor,
-                  child: CameraScreen(),
+                  Firebase_Func: () {
+                    try {
+                      final newUser = _auth.createUserWithEmailAndPassword(
+                          email: emailAndpassword.email,
+                          password: emailAndpassword.password);
+                      if (newUser != null) {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CameraScreen(),
+                          ),
+                        );
+                      }
+                    } catch (e) {
+                      print(e);
+                    }
+                  },
                 ),
               )
             ],

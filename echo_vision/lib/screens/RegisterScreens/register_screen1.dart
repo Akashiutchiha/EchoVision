@@ -1,5 +1,4 @@
 import 'package:echo_vision/screens/RegisterScreens/register_screen2.dart';
-import 'package:echo_vision/screens/RegisterScreens/register_screen3.dart';
 import 'package:flutter/material.dart';
 import '../../components/constants.dart';
 import '../../components/text_button_style.dart';
@@ -8,8 +7,6 @@ import '../../components/my_text_field.dart';
 import '../home.dart';
 
 class Register1 extends StatelessWidget {
-  const Register1({super.key});
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -67,7 +64,14 @@ class Register1 extends StatelessWidget {
                 child: TextButtonStyle(
                   text: "Confirm",
                   color: kPrimaryColor,
-                  child: Register2(),
+                  Firebase_Func: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Register2(),
+                      ),
+                    );
+                  },
                 ),
               )
             ],

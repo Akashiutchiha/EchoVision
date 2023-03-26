@@ -63,13 +63,30 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   TextButtonStyle(
                     text: 'Register',
                     color: kPrimaryColor,
-                    child: Register1(),
+                    Firebase_Func: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Register1(),
+                        ),
+                      );
+                    },
                   ),
                   SizedBox(
                     height: 20,
                   ),
                   TextButtonStyle(
-                      text: 'Login', color: Color(0XFFafbbef), child: Login1()),
+                    text: 'Login',
+                    color: Color(0XFFafbbef),
+                    Firebase_Func: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Login1(),
+                        ),
+                      );
+                    },
+                  ),
                 ],
               ),
             ],
