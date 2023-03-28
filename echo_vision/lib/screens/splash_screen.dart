@@ -1,4 +1,5 @@
 import 'package:echo_vision/screens/welcome_screen.dart';
+import 'package:echo_vision/wrapper.dart';
 import 'package:flutter/material.dart';
 import 'package:splashscreen/splashscreen.dart';
 
@@ -14,7 +15,7 @@ class Splashscreen extends StatelessWidget {
       body: Stack(children: [
         SplashScreen(
           seconds: 3,
-          navigateAfterSeconds: WelcomeScreen(),
+          navigateAfterSeconds: Wrapper(),
           title: const Text(
             'Echo Vision',
             style: TextStyle(
@@ -23,7 +24,7 @@ class Splashscreen extends StatelessWidget {
           ),
           image: const Image(
             image: AssetImage(
-              'images/Frame 5.png',
+              'assets/images/Frame 5.png',
             ),
           ),
           backgroundColor: kPrimaryColor,

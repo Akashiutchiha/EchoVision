@@ -16,14 +16,18 @@ class Home extends StatelessWidget {
         children: [
           Container(
             child: Text(
+              textAlign: TextAlign.center,
               'Welcome Back Fritz',
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w400),
+              style: TextStyle(
+                fontSize: 40,
+                fontWeight: FontWeight.w400,
+              ),
             ),
           ),
           SizedBox(
             height: 40,
           ),
-          Image(image: AssetImage("images/Frame 9.png"))
+          Image(image: AssetImage("assets/images/Frame 9.png"))
         ],
       ),
     );

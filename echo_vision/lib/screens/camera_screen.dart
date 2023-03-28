@@ -34,7 +34,7 @@ class CameraScreen extends StatelessWidget {
                             MaterialPageRoute(builder: (context) => Home()));
                       },
                       child: Image(
-                        image: AssetImage("images/setting.png"),
+                        image: AssetImage("assets/images/setting.png"),
                       ),
                     ),
                   ),
@@ -48,7 +48,7 @@ class CameraScreen extends StatelessWidget {
                   child: Container(
                     margin: EdgeInsets.all(25),
                     child: Image(
-                      image: AssetImage('images/Frame 9.png'),
+                      image: AssetImage('assets/images/Frame 9.png'),
                     ),
                   ),
                 ),

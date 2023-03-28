@@ -50,6 +50,7 @@ class Register3 extends StatelessWidget {
                 height: 20.0,
               ),
               MyTextField(
+                obscuretext: true,
                 title: "Password",
                 onPressed: (value) {
                   emailAndpassword.password = value;
@@ -62,7 +63,7 @@ class Register3 extends StatelessWidget {
                       backgroundColor: kPrimaryColor,
                       radius: 70.0,
                       child: Image(
-                        image: AssetImage("images/Frame 7.png"),
+                        image: AssetImage("assets/images/Frame 7.png"),
                       ),
                     ),
                   ),

@@ -52,7 +52,7 @@ class Register1 extends StatelessWidget {
                       backgroundColor: kPrimaryColor,
                       radius: 70.0,
                       child: Image(
-                        image: AssetImage("images/Frame 7.png"),
+                        image: AssetImage("assets/images/Frame 7.png"),
                       ),
                     ),
                   ),
