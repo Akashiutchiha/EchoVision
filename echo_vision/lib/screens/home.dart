@@ -10,25 +10,27 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('Echo Vision'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Container(
-            child: Text(
-              textAlign: TextAlign.center,
-              'Welcome Back Fritz',
-              style: TextStyle(
-                fontSize: 40,
-                fontWeight: FontWeight.w400,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              child: Text(
+                textAlign: TextAlign.center,
+                'Welcome Back Christian',
+                style: TextStyle(
+                  fontSize: 40,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
-          ),
-          SizedBox(
-            height: 40,
-          ),
-          Image(image: AssetImage("assets/images/Frame 9.png"))
-        ],
+            SizedBox(
+              height: 40,
+            ),
+            Image(image: AssetImage("assets/images/Frame 9.png"))
+          ],
+        ),
       ),
     );
   }

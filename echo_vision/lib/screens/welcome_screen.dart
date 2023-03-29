@@ -31,7 +31,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   color: kPrimaryColor,
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
-                      image: AssetImage('images/Frame 6.png'), scale: 1.0),
+                      image: AssetImage('assets/images/Frame 6.png'),
+                      scale: 1.0),
                 ),
               ),
               const SizedBox(
