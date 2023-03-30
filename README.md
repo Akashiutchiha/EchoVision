@@ -30,8 +30,7 @@ We are committed to continually improving and expanding our solution in order to
 
 ## Contributing
 
-We welcome contributions from the community. If you are interested in contributing to EchoVision, please see our [contributing guidelines](CONTRIBUTING.md) for more information.
-
+We welcome contributions from the community. If you are interested in contributing to EchoVision.
 ## License
 
 EchoVision is licensed under the [MIT License](LICENSE).
