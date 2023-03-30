@@ -14,7 +14,7 @@ class Wrapper extends StatelessWidget {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           print(snapshot.data);
-          return WelcomeScreen();
+          return CameraScreen();
         } else {
           return WelcomeScreen();
         }
