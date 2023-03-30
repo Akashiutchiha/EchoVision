@@ -13,7 +13,7 @@ EchoVision is an app that uses computer vision technology to provide audio feedb
 
 ## Installation
 
-EchoVision is available for download on the App Store and Google Play Store.
+EchoVision will soon be available for download on the App Store and Google Play Store.
 
 ## Usage
 
