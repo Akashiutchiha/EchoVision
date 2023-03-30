@@ -1,5 +1,3 @@
-Sure, here is a possible README.md file for the EchoVision GitHub repo:
-
 # EchoVision
 
 EchoVision is an app that uses computer vision technology to provide audio feedback on the user's surroundings, making it easier for visually impaired individuals to navigate through the world and access information that might otherwise be difficult to obtain.
