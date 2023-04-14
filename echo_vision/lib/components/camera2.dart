@@ -1,3 +1,5 @@
+import 'dart:core';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:tflite/tflite.dart';
@@ -68,7 +70,7 @@ class _CameraApptwoState extends State<CameraApptwo> {
       );
       for (var element in predictions!) {
         setState(() {
-          output = element['label'];
+          output = element['label'] + ' ' + "${element['confidence']}";
         });
       }
     }
