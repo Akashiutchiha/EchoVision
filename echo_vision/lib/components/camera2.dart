@@ -28,6 +28,13 @@ class _CameraApptwoState extends State<CameraApptwo> {
     loadCamera();
   }
 
+  @override
+  void dispose() {
+    controller.dispose();
+    Tflite.close();
+    super.dispose();
+  }
+
   loadCamera() async {
     controller = CameraController(cameras[0], ResolutionPreset.max);
     controller.initialize().then((_) {
