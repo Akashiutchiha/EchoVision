@@ -21,10 +21,10 @@ class _CameraApptwoState extends State<CameraApptwo> {
 
   List<dynamic>? results;
 
-  String output = 'he';
+  String output = '';
 
   @override
-  void initState() {
+  void initState() { 
     super.initState();
     loadModel();
     loadCamera();
