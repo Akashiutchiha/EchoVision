@@ -21,10 +21,10 @@ class _CameraApptwoState extends State<CameraApptwo> {
 
   List<dynamic>? results;
 
-  String output = '';
+  String output = 'computer';
 
   @override
-  void initState() { 
+  void initState() {
     super.initState();
     loadModel();
     loadCamera();
@@ -32,6 +32,7 @@ class _CameraApptwoState extends State<CameraApptwo> {
 
   @override
   void dispose() {
+    // interpreter.close();
     controller.dispose();
     Tflite.close();
     super.dispose();
@@ -61,10 +62,10 @@ class _CameraApptwoState extends State<CameraApptwo> {
         }).toList(),
         imageHeight: cameraImage!.height,
         imageWidth: cameraImage!.width,
-        imageMean: 127.5,
-        imageStd: 127.5,
+        imageMean: 128.0,
+        imageStd: 128.0,
         rotation: 90,
-        numResults: 2,
+        numResults: 1,
         threshold: 0.1,
         asynch: true,
       );
@@ -80,6 +81,7 @@ class _CameraApptwoState extends State<CameraApptwo> {
     await Tflite.loadModel(
       model: 'assets/model/model.tflite',
       labels: 'assets/model/label.txt',
+      numThreads: 1,
     );
   }
 

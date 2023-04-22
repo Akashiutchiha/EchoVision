@@ -18,7 +18,7 @@ class CameraScreen extends StatelessWidget {
               children: [
                 Container(
                   padding: EdgeInsets.all(8),
-                  height: 85,
+                  height: 160,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     color: Color(0xFF131433),
@@ -46,7 +46,7 @@ class CameraScreen extends StatelessWidget {
               children: [
                 Center(
                   child: Container(
-                    margin: EdgeInsets.all(25),
+                    margin: EdgeInsets.only(bottom: 15),
                     child: Image(
                       image: AssetImage('assets/images/Frame 9.png'),
                     ),
