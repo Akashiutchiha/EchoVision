@@ -1,6 +1,7 @@
 import 'package:echo_vision/components/camera.dart';
 import 'package:echo_vision/screens/home.dart';
 import 'package:flutter/material.dart';
+import 'package:echo_vision/components/camera2.dart';
 
 class CameraScreen extends StatelessWidget {
   const CameraScreen({super.key});
@@ -9,16 +10,15 @@ class CameraScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Color(0xFF131433),
         body: Stack(
           children: [
-            const CameraApp(),
+            CameraApptwo(),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(
                   padding: EdgeInsets.all(8),
-                  height: 85,
+                  height: 160,
                   width: double.infinity,
                   decoration: const BoxDecoration(
                     color: Color(0xFF131433),
@@ -46,7 +46,7 @@ class CameraScreen extends StatelessWidget {
               children: [
                 Center(
                   child: Container(
-                    margin: EdgeInsets.all(25),
+                    margin: EdgeInsets.only(bottom: 15),
                     child: Image(
                       image: AssetImage('assets/images/Frame 9.png'),
                     ),
