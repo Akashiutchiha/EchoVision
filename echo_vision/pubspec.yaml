@@ -41,7 +41,10 @@ dependencies:
   firebase_auth: ^4.2.9
   cloud_firestore: ^4.4.3
   provider: ^6.0.5
+  tflite_flutter: ^0.9.0
+  tflite: 
 
+  # tflite_audio: ^0.3.0843ews
 
 dev_dependencies:
   flutter_test:
