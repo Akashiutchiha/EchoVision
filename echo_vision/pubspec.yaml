@@ -41,8 +41,14 @@ dependencies:
   firebase_auth: ^4.2.9
   cloud_firestore: ^4.4.3
   provider: ^6.0.5
+<<<<<<< HEAD
   tflite_flutter: ^0.9.0
   tflite: 
+=======
+  tflite: ^1.1.2
+  # text_to_speech: ^0.2.3
+  
+>>>>>>> refs/remotes/origin/main
 
   # tflite_audio: ^0.3.0843ews
 
@@ -71,7 +77,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/
-    - assets/model/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

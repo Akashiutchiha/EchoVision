@@ -1,3 +1,8 @@
 0 Happy
+<<<<<<< HEAD
 1 Angry
 2 sad
+=======
+1 Sad
+2 Angry
+>>>>>>> refs/remotes/origin/main

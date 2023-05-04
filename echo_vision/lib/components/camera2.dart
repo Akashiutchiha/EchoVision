@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import 'dart:core';
+import 'dart:io';
+>>>>>>> refs/remotes/origin/main
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
 import 'package:tflite/tflite.dart';
@@ -19,7 +24,11 @@ class _CameraApptwoState extends State<CameraApptwo> {
 
   List<dynamic>? results;
 
+<<<<<<< HEAD
   String output = '';
+=======
+  String output = 'computer';
+>>>>>>> refs/remotes/origin/main
 
   @override
   void initState() {
@@ -28,8 +37,21 @@ class _CameraApptwoState extends State<CameraApptwo> {
     loadCamera();
   }
 
+<<<<<<< HEAD
   loadCamera() async {
     controller = CameraController(cameras[0], ResolutionPreset.low);
+=======
+  @override
+  void dispose() {
+    // interpreter.close();
+    controller.dispose();
+    Tflite.close();
+    super.dispose();
+  }
+
+  loadCamera() async {
+    controller = CameraController(cameras[0], ResolutionPreset.max);
+>>>>>>> refs/remotes/origin/main
     controller.initialize().then((_) {
       if (!mounted) {
         return;
@@ -61,7 +83,11 @@ class _CameraApptwoState extends State<CameraApptwo> {
       );
       for (var element in predictions!) {
         setState(() {
+<<<<<<< HEAD
           output = element['label'];
+=======
+          output = element['label'] + ' ' + "${element['confidence']}";
+>>>>>>> refs/remotes/origin/main
         });
       }
     }
@@ -71,6 +97,10 @@ class _CameraApptwoState extends State<CameraApptwo> {
     await Tflite.loadModel(
       model: 'assets/model/model.tflite',
       labels: 'assets/model/label.txt',
+<<<<<<< HEAD
+=======
+      numThreads: 1,
+>>>>>>> refs/remotes/origin/main
     );
   }
 
@@ -83,11 +113,15 @@ class _CameraApptwoState extends State<CameraApptwo> {
       home: Scaffold(
         body: Stack(
           children: [
+<<<<<<< HEAD
             Expanded(
               child: CameraPreview(
                 controller,
               ),
             ),
+=======
+            Expanded(child: CameraPreview(controller)),
+>>>>>>> refs/remotes/origin/main
             Center(
               child: Positioned(
                 bottom: 150,
