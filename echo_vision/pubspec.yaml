@@ -41,14 +41,9 @@ dependencies:
   firebase_auth: ^4.2.9
   cloud_firestore: ^4.4.3
   provider: ^6.0.5
-<<<<<<< HEAD
-  tflite_flutter: ^0.9.0
-  tflite: 
-=======
   tflite: ^1.1.2
-  # text_to_speech: ^0.2.3
+  text_to_speech: ^0.2.3
   
->>>>>>> refs/remotes/origin/main
 
   # tflite_audio: ^0.3.0843ews
 
