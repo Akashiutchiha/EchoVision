@@ -60,10 +60,10 @@ class _CameraApptwoState extends State<CameraApptwo> {
         bytesList: cameraImage!.planes.map((plane) {
           return plane.bytes;
         }).toList(),
-        imageHeight: cameraImage!.height,
-        imageWidth: cameraImage!.width,
-        imageMean: 128.0,
-        imageStd: 128.0,
+        imageHeight: 1280, //cameraImage!.height,
+        imageWidth: 720, //cameraImage!.width,
+        imageMean: 127.5,
+        imageStd: 127.5,
         rotation: 90,
         numResults: 1,
         threshold: 0.1,
@@ -79,9 +79,9 @@ class _CameraApptwoState extends State<CameraApptwo> {
 
   loadModel() async {
     await Tflite.loadModel(
-      model: 'assets/model/model.tflite',
+      model: 'assets/model/model1.tflite',
       labels: 'assets/model/label.txt',
-      numThreads: 1,
+      numThreads: 3,
     );
   }
 
@@ -94,10 +94,9 @@ class _CameraApptwoState extends State<CameraApptwo> {
       home: Scaffold(
         body: Stack(
           children: [
-            Expanded(child: CameraPreview(controller)),
+            CameraPreview(controller),
             Center(
               child: Positioned(
-                bottom: 150,
                 child: Container(
                   padding: const EdgeInsets.all(10),
                   color: Color.fromARGB(137, 255, 255, 255),

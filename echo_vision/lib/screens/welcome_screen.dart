@@ -46,8 +46,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 "Echo Vision",
                 style: kSubHeadingStyle,
               ),
-              SizedBox(
-                height: 20,
+              Expanded(
+                child: Container(),
               ),
               Text(
                 "Android Application which offers services to ",
@@ -55,8 +55,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
               Text("help people who are visually impaired.",
                   style: kNormalStyle),
-              SizedBox(
-                height: 160,
+              Expanded(
+                child: Container(),
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
